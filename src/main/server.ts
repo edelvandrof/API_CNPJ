@@ -1,5 +1,12 @@
 import 'dotenv/config';
-import { setupApp } from './infrastructure';
+import './config/module-alias'
+
+import 'reflect-metadata';
+import '@/infrastructure/repos/postgres/helpers/postgres';
+//import { setupApp } from './infrastructure';
+
+postgres
+
 
 const app = setupApp();
 const PORT = process.env.PORT || 3000;

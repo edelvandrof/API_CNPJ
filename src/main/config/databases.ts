@@ -1,4 +1,4 @@
-import { postgres } from './../db';
+import { postgres } from '../../infrastructure/db';
 
 let isConnected = false;
 
