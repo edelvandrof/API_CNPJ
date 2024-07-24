@@ -1,10 +1,12 @@
 import express, { Request, Response } from 'express';
-import cors from 'cors';
 import setupRoutes from './routes';
+import { setupMiddlewares } from './middlewares';
+import { setupPostgres } from './databases';
 
 export const setupApp = () => {
     const app = express()
-    app.use(cors())
     setupRoutes(app)
+    setupMiddlewares(app)
+    setupPostgres();
     return app
 }

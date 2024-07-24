@@ -1,5 +1,5 @@
 import { type Express, Router } from "express";
-import { health } from "@/infrastructure/http/routes";
+import { health } from "./../http";
 //Resolve non-relative import
 export default (app: Express) => {
     const router = Router();

@@ -1,8 +1,5 @@
-import dontenv from 'dotenv';
+import 'dotenv/config';
 import { setupApp } from './infrastructure';
-require('module-alias/register');
-
-dontenv.config();
 
 const app = setupApp();
 const PORT = process.env.PORT || 3000;
