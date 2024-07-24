@@ -4,19 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "npx nodemon",
-    "build": "rimraf ./dist && tsc"
+    "start:dev": "ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
     "@types/node": "^20.14.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "husky": "^9.1.1",
     "nodemon": "^3.1.4",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
-  }
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.4",
+    "uuid": "^10.0.0"
+  },
+  "_moduleAliases": {
+    "@src": "dist"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.3"
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+}
 }
